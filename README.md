@@ -22,7 +22,7 @@ Or, you can specify the slurp noise like so:
 
 ```
 
-$("#ayyylmao").slurp({slurpNoise: "name_of_file_without_extention_found_in_/slurps"}); //wow! it still werks
+$("#ayyylmao").slurp({slurpNoise: "name_of_file_without_extension_found_in_/slurps"}); //wow! it still werks
 ```
 
 #FAQ
