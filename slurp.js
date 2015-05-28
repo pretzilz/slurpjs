@@ -1,5 +1,7 @@
 /*
  * slurp.js
+ * Kurt Kaufman
+ * 5-27-2015
  * Free to use under my own, personal DBAA (Don't be an asshole) license.
  * Hint: that's the entire text of the license
  * Talk to your doctor before using slurp.js.
