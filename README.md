@@ -16,16 +16,13 @@ Kind of like this is some cult or something. Go on, drink the Kool-Aid.
 #Example
 If you just want something to slurp obnoxiously:
 ```
-<code>
 $("#ayyylmao").slurp(); //wow! it just werks
-</code>
 ```
 Or, you can specify the slurp noise like so:
 
 ```
-<code>
-$("#ayyylmao").slurp({slurpNoise: "name_of_file_without_extention_found_in_/slurps_underscore"}); //wow! it still werks
-</code>
+
+$("#ayyylmao").slurp({slurpNoise: "name_of_file_without_extention_found_in_/slurps"}); //wow! it still werks
 ```
 
 #FAQ
