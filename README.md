@@ -21,8 +21,12 @@ $("#ayyylmao").slurp(); //wow! it just werks
 Or, you can specify the slurp noise like so:
 
 ```
-
 $("#ayyylmao").slurp({slurpNoise: "name_of_file_without_extension_found_in_/slurps"}); //wow! it still werks
+```
+
+If you're feeling adventurous:
+```
+$("#ayyylmao").slurp({slurpNoise: "random"});
 ```
 
 #FAQ
