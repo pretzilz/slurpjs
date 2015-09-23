@@ -29,6 +29,8 @@ If you're feeling adventurous:
 $("#ayyylmao").slurp({slurpNoise: "random"});
 ```
 
+And even better, see the index.html for a demo (thanks Zachary!)
+
 #FAQ
 ###What the hell is this?
 Don't ask questions.
