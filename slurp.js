@@ -9,73 +9,79 @@
 
 
 (function($) {
-
-	//if your browser doesn't support audio then you should get gud
+	//list of slurps		
+	var slurps = ["wat", "velociraptor", "sanic", "ohgod", "obnoxious", "mrboneswildride", "happy", "hailsatan", "casual_tier"];
 	
-    $.fn.slurp = function(sickOptionsBreh) {
+	function doSettings(sickOptionsBreh) {
 		var casualModeSettings = {
-				slurpNoise: "casual_tier"
-			};
+			slurpNoise: "casual_tier"
+		};
 			
 		//this line does things
 		var sickOptionsBreh = $.extend(casualModeSettings, sickOptionsBreh);
 		
-		//list of slurp names
-		var slurps = ["wat", "velociraptor", "sanic", "ohgod", "obnoxious", "mrboneswildride", "happy", "hailsatan", "casual_tier"];
+		if(sickOptionsBreh.slurpNoise == "random") {
+			//if it's random, just load a default sound, it'll be changed (just trust me)
+			//TODO: remove the above comment
+			var randomSlurp = Math.floor(Math.random() * slurps.length);
+			setupSlurp(slurps[randomSlurp]);
+		} else {
+			setupSlurp(sickOptionsBreh.slurpNoise);	
+		}
+	};
+	
+	//ayy lmao
+	function playSlurp() {
+		//play that sh*t
+		document.getElementById('slurpIntensifies').play();
+	};
+	
+	function setupSlurp(slurpNoise) {
+		var alreadySlurpin = document.getElementById('slurpIntensifies');
+		if(alreadySlurpin) {
+			alreadySlurpin.src = "slurps/" + slurpNoise + ".ogg";
+			alreadySlurpin.load();
+		} else {
+			/*satan loves html in javascript, so we'll do that too */
+			var slurpHTML = '<audio id="slurpIntensifies" preload="auto"><source id = "wavSound" src="slurps/' + slurpNoise 
+								+ '.wav" /><source id = "oggSound" src="slurps/' + slurpNoise + '.ogg" /></audio>';
+			$('body').append(slurpHTML);
+		}
+	};
+	
+	function changeSound(slurpNoise) {
+		//choose a slurp at random
+		var randomSlurp =  slurps[Math.floor(Math.random() * slurps.length)];	
+		
+		//change the sources
+		$("#wavSound").attr("src", "slurps/" + randomSlurp + ".wav");			
+		$("#oggSound").attr("src", "slurps/" + randomSlurp + ".ogg");
+		
+		//load that sh*t
+		document.getElementById('slurpIntensifies').load();
+	};
+	
+	//if your browser doesn't support audio then you should get gud
+    $.fn.slurp = function(sickOptionsBreh) {
+		doSettings(sickOptionsBreh);
 		
         return this.each(function() {
-			
 			/*if you want to specify slurp noise, just pass in the name of the sound you want (or random)*/
-			
-			var _this = $(this);
-			
-			/*satan loves html in javascript, so we'll do that too */
-			if (sickOptionsBreh.slurpNoise == "random")
-			{
-				//if it's random, just load a default sound, it'll be changed (just trust me)
-				var slurpHTML = '<audio id="slurpIntensifies" preload="none"><source id = "wavSound" src="slurps/casual_tier.wav" /><source id = "oggSound" src="slurps/casual_tier.ogg" /></audio>';	
-			}
-			
-			else {
-				
-				//otherwise play your dumb choice
-				var slurpHTML = '<audio id="slurpIntensifies" preload="auto"><source id = "wavSound" src="slurps/' + sickOptionsBreh.slurpNoise 
-							+ '.wav" /><source id = "oggSound" src="slurps/' + sickOptionsBreh.slurpNoise + '.ogg" /></audio>';	
-			}
-			
-					
-			$('body').append(slurpHTML); 
-			
-			function init() {
-			
-				//ayy lmao
-				function playSound() {
-					if (sickOptionsBreh.slurpNoise == "random")
-					{
-						//choose a slurp at random
-						var randomSlurp =  slurps[Math.floor(Math.random() * slurps.length)];	
-						
-						//change the sources
-						$("#wavSound").attr("src", "slurps/" + randomSlurp + ".wav");			
-						$("#oggSound").attr("src", "slurps/" + randomSlurp + ".ogg");
-						
-						//load that sh*t
-						document.getElementById('slurpIntensifies').load();						
-					}
-					
-					//play that sh*t
-					document.getElementById('slurpIntensifies').play();
+			$(this).bind('click', function(e) {
+				if(sickOptionsBreh.slurpNoise == "random") {
+					var randomSlurp = Math.floor(Math.random() * slurps.length);
+					setupSlurp(slurps[randomSlurp]);
 				}
-		
-				playSound();
-				
-				}
-			
-			_this.bind('click', function(e) {
-				init();
+				playSlurp();
 			})
-			
         });
-    }
+    };
+	
+	$.slurp = function(sickOptionsBreh) {
+		doSettings(sickOptionsBreh);
+		
+		playSlurp();
+	};
+	
 })(jQuery);
 
