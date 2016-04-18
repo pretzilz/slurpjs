@@ -36,7 +36,18 @@ If you're feeling adventurous:
 $("#ayyylmao").slurp({slurpNoise: "random"});
 ```
 
-And even better, see the index.html for a demo (thanks Zachary!)
+#Now with AngularJS
+Just include all the files and ng-slurp any object!
+```
+<div ng-slurp settings="settingsObj"></div>
+```
+
+Or simply slurp yourself
+```
+<slurp settings="settingsObj"></slurp>
+```
+
+And even better, see the index.html (thanks Zachary!) or the new ngSlurp.html (thanks Derrick!) for a demo 
 
 #FAQ
 ###What the hell is this?
