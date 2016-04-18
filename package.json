@@ -1,0 +1,27 @@
+{
+  "name": "slurpjs",
+  "version": "1.0.0",
+  "description": "The only bullsh*t esoteric javascript library you'll ever need.If you don't think so, you thought like an idiot.",
+  "main": "jquery-2.1.1.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pretzilz/slurpjs.git"
+  },
+  "keywords": [
+    "slurp",
+    "slurpjs"
+  ],
+  "author": "Kurt Kaufman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pretzilz/slurpjs/issues"
+  },
+  "homepage": "https://github.com/pretzilz/slurpjs#readme",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "jquery": "^2.2.3"
+  }
+}

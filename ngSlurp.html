@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body ng-app="myApp" ng-controller="appController as app">
+  <a ng-slurp settings="app.slurpSettings" id="ayyylmao">Mmmmm</a>
+  <slurp></slurp>
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+  <script type="text/javascript" src="slurp.js"></script>
+  <script type="text/javascript" src="ngSlurp.js"></script>
+  <script type="text/javascript">
+    var app = angular.module('myApp', ['ngSlurp'])
+    .controller('appController', [function() {
+        var app = this;
+        app.slurpSettings = { slurpNoise: "happy" };
+    }]);
+  </script>
+</body>
+</html>
