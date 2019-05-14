@@ -1,10 +1,5 @@
 # slurpjs
-The only bullsh*t esoteric javascript library you'll ever need.If you don't think so, you thought like an idiot.
-
-#License
-The DBAA license, also known as the Don't Be An Asshole license reads as follows:
-
-###Don't be an asshole.
+The only garbage esoteric javascript library you'll ever need. If you don't think so, you thought wrong.
 
 # Requirements
 Jake Weary. Included for your convenience.
@@ -47,9 +42,5 @@ Or simply slurp yourself
 <slurp settings="settingsObj"></slurp>
 ```
 
-And even better, see the index.html (thanks Zachary!) or the new ngSlurp.html (thanks Derrick!) for a demo 
-
-#FAQ
-###What the hell is this?
-Don't ask questions.
+And even better, see the index.html (thanks Zachary!) or the new ngSlurp.html (thanks Derrick!) for a demo.
 
