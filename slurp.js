@@ -5,6 +5,12 @@
  * Free to use under my own, personal DBAA (Don't be an asshole) license.
  * Hint: that's the entire text of the license
  * Talk to your doctor before using slurp.js.
+ * 
+ * 
+ * Update slurp.html
+ * Sean Mitchell
+ * I updated it.
+ * #Check commits for info ¯\_(ツ)_/¯
 */
 
 
@@ -39,7 +45,7 @@
 	function setupSlurp(slurpNoise) {
 		var alreadySlurpin = document.getElementById('slurpIntensifies');
 		if(alreadySlurpin) {
-			alreadySlurpin.src = "slurps/" + slurpNoise + ".ogg";
+			alreadySlurpin.src = "slurps/" + slurpNoise + ".wav";
 			alreadySlurpin.load();
 		} else {
 			/*satan loves html in javascript, so we'll do that too */
@@ -47,18 +53,6 @@
 								+ '.wav" /><source id = "oggSound" src="slurps/' + slurpNoise + '.ogg" /></audio>';
 			$('body').append(slurpHTML);
 		}
-	};
-	
-	function changeSound(slurpNoise) {
-		//choose a slurp at random
-		var randomSlurp =  slurps[Math.floor(Math.random() * slurps.length)];	
-		
-		//change the sources
-		$("#wavSound").attr("src", "slurps/" + randomSlurp + ".wav");			
-		$("#oggSound").attr("src", "slurps/" + randomSlurp + ".ogg");
-		
-		//load that sh*t
-		document.getElementById('slurpIntensifies').load();
 	};
 	
 	//if your browser doesn't support audio then you should get gud
